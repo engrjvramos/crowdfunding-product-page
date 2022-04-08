@@ -1,54 +1,58 @@
-.btn {
-  display: inline-block;
-  text-transform: uppercase;
+.button{
+  cursor: pointer;
   text-align: center;
-  transition: all 0.3s ease;
-  font-size: 1.3rem;
-  letter-spacing: 1px;
   font-weight: 700;
+  font-size: 1.4rem;
+  border-radius: 100rem;
+  height: 100%;
 }
 
-.btn-primary {
+.button-primary{
   color: var(--clr-white);
   background-color: var(--clr-primary);
-  padding-block: 1.5rem;
-  width: 16rem;
+  padding-inline: 4rem;
+  transition: background-color 0.3s ease;
 
-  &:hover {
-    background-color: var(--clr-primary-light);
+  &:hover{
+    background-color: var(--clr-primary-dark);
   }
 }
 
-.btn-secondary {
-  color: var(--clr-black);
-  background-color: var(--clr-white);
-  padding-block: 1.5rem;
-  width: 16rem;
-  border: 1px solid var(--clr-black);
-
-  &:hover {
-    color: var(--clr-white);
-    background-color: var(--clr-black);
-  }
+.button-secondary {
+  color: var(--clr-white);
+  background-color: rgba(47, 47, 47, 0.3);
+  padding-inline: 3.8rem;
 }
 
-.btn-tertiary {
-  height: 1.8rem;
-  color: rgba(0, 0, 0, 0.5);
-
-  .btn-container {
-    display: flex;
-    align-items: center;
+.button-bookmark{
+  display: flex;
+  align-items: center;
+  column-gap: 1.6rem;
+  padding-right: 2.4rem;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  
+  circle, path{ 
+    transition: fill 0.3s ease;
   }
 
-  span {
-    margin-right: 1.332rem;
-    transition: color 0.3s ease;
+  &:hover{
+    color: var(--clr-gray-dark);
+
+    circle{
+      fill: #707070;
+    }
   }
 
-  &:hover {
-    span {
-      color: var(--clr-primary);
+  &[data-bookmarked='true'] {
+    color: var(--clr-primary-dark);
+    background-color: rgba(20, 122, 115, 0.1);
+
+    circle{
+      fill: var(--clr-primary-dark);
+    }
+
+    path{
+      fill: var(--clr-white);
     }
   }
 }

@@ -1,24 +1,18 @@
 @mixin respond($breakpoint) {
 	@if $breakpoint == mobileXS {
-		@media only screen and (max-width: 18.75em) {
+		@media only screen and (max-width: 17.5em) {
 			@content;
 		}
 	}
 
 	@if $breakpoint == mobileS {
-		@media only screen and (max-width: 28.125em) {
-			@content;
-		}
-	}
-
-	@if $breakpoint == bp-550 {
-		@media only screen and (max-width: 34.375em) {
+		@media only screen and (max-width: 23.5em) {
 			@content;
 		}
 	}
 
 	@if $breakpoint == mobile {
-		@media only screen and (max-width: 40.625em) {
+		@media only screen and (max-width: 30em) {
 			@content;
 		}
 	}
