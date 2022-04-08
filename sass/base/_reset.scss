@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --clr-primary: hsl(176, 50%, 47%);
+  --clr-primary-dark: hsl(176, 72%, 28%);
+
+  --clr-neutral-dark-100: #101010;
+  --clr-neutral-dark-200: #141414;
+  --clr-neutral-light-100: #fafafa;
+  --clr-neutral-light-200: #f1f1f1;
+
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-black: hsl(0, 0%, 0%);
+  --clr-gray-dark: hsl(0, 0%, 48%);
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Commissioner', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  min-height: 100vh;
+ 
+  display: grid;
+  grid-template-rows: min-content 1fr;
+}
+
+img {
+	max-width: 100%;
+	display: block;
+}
+
+input,
+button,
+textarea,
+select {
+	font: inherit;
+	border: none;
+	outline: none;
+}
+
+a {
+	text-decoration: none;
+
+	&:link,
+	&:visited {
+		color: inherit;
+	}
+}
+
+li {
+	list-style-type: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}
